@@ -1,0 +1,25 @@
+<div class="inner-box">
+        <h2 class="title-2"><i class="fa fa-plus"></i> [#lang_title_withdrawal]</h2>
+    
+        [@results]
+        
+        <form action="" method="POST">
+            <div class="form-group">
+                <label>[#lang_field_8]</label>
+                <select class="form-control" name="gateway">
+                    [@gateways_list]
+                </select>
+            </div>
+            <div class="form-group">
+                <label>[#lang_field_9]</label>
+                <input type="text" class="form-control" name="account">
+            </div>
+            <div class="form-group">
+                <label>[#lang_field_1]</label>
+                <input type="text" class="form-control" name="amount">
+                <small>[#lang_your_balance]: [@balance]<br/>[#lang_min_withdrawal_amount]: [@min_amount]</small>
+            </div>
+            <button type="submit" class="btn btn-primary" name="ce_btn" value="withdrawal">[#lang_btn_3]</button>
+        </form>
+    </div>
+    

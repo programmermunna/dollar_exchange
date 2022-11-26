@@ -1,0 +1,8 @@
+User-agent: Googlebot
+Disallow: /app/admin/
+Disallow: /app/admin
+
+User-agent: *
+Allow: /
+
+Sitemap: https://atopwallet.com/sitemap.xml

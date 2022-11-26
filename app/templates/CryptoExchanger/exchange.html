@@ -1,0 +1,124 @@
+<div style="background: linear-gradient(#1f6142,#1f6142);">
+<div class="main-container">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-9">
+                        <div class="inner-box">
+                            <h2 class="title-2">[#lang_exchange] [@gateway_send] [@gateway_send_currency] [#lang_to] [@gateway_receive] [@gateway_receive_currency] <span id="exrateupdate" class="pull-right" style="display:none;"><small><span class="badge badge-primary"><i class="fa fa-spin fa-spinner"></i> [#lang_auto_update_exchange_rate]...</span></small></span></h2>
+                            [@results]
+                            <form action="" method="POST">
+                                    <div class="row">
+                                            <div class="col-md-2 hidden-xs hidden-sm">
+                                                <center>
+                                                    <img src="[@gateway_send_icon]" width="64px" height="64px" class="img-circle cryptoexchanger-icon2">
+                                                </center>
+                                            </div>
+                                            <div class="col-md-7">
+                                                <div class="form-group">
+                                                    <label>[#lang_send]</label>
+                                                    <input type="text" disabled class="form-control cryptoexchanger-input" value="[@gateway_send] [@gateway_send_currency]">
+                                                </div>
+                                            </div>
+                                            <div class="col-md-3">
+                                                <div class="form-group">
+                                                    <label>[#lang_amount]</label>
+                                                    <input type="text" class="form-control cryptoexchanger-input" required id="ce_amount_send" name="ce_amount_send" value="[@amount_send]" onkeyup="ce_calculator(1);" onkeydown="ce_calculator(1);">
+                                                </div>
+                                            </div>
+                                            <div class="col-md-12">
+                                                <div class="text-right text-muted">
+                                                    <small>
+                                                        [#lang_exchange_rate]: <span id="ce_exchange_rate">[@rate_from] [@gateway_send_currency] = [@rate_to] [@gateway_receive_currency]</span><br/>
+                                                        [#lang_min_amount]: [@min_amount] [@gateway_send_currency]<br/>
+                                                        [#lang_max_amount]: [@max_amount] [@gateway_send_currency]
+                                                    </small>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <hr/>
+                                        <div class="row">
+                                                <div class="col-md-2 hidden-xs hidden-sm">
+                                                    <center>
+                                                        <img src="[@gateway_receive_icon]" width="64px" height="64px" class="img-circle cryptoexchanger-icon2">
+                                                    </center>
+                                                </div>
+                                                <div class="col-md-7">
+                                                    <div class="form-group">
+                                                        <label>[#lang_receive]</label>
+                                                        <input type="text" disabled class="form-control cryptoexchanger-input" value="[@gateway_receive] [@gateway_receive_currency]">
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-3">
+                                                    <div class="form-group">
+                                                        <label>[#lang_amount]</label>
+                                                        <input type="text" class="form-control cryptoexchanger-input" required id="ce_amount_receive" name="ce_amount_receive" value="[@amount_receive]" onkeyup="ce_calculator(2);" onkeydown="ce_calculator(2);">
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-12">
+                                                        <div class="text-right text-muted">
+                                                            <small>
+                                                                [#lang_reserve]: <span id="ce_reserve_text">[@reserve] [@gateway_receive_currency]</span><br/>
+                                                                <a href="[@request_link]">[#lang_need_more]</a>
+                                                            </small>
+                                                        </div>
+                                                    </div>
+                                            </div>
+                                            <hr/>
+                                        <div class="row">
+                                            <div class="col-md-12">
+                                                <div class="form-group">
+                                                    <label>[#lang_field_30]</label>
+                                                    <input type="text" class="form-control" name="u_field_1" required>
+                                                </div>
+
+                                                [@ufields]
+                                            </div>
+                                        </div>
+                                        <hr/>
+                                        [@exchange_rules]
+                                        <div class="row">
+                                            <div class="col-md-12">
+                                                [@insert_recaptcha]
+                                            </div>
+                                            <div class="col-md-8">
+                                                    <div class="form-check">
+                                                            <label class="form-check-label">
+                                                                <input class="form-check-input" type="checkbox" name="p1" required value="ok"> [#lang_i_agree_with] <a href="[@url]page/terms-of-services">[#lang_title_terms_of_services]</a>
+                                                            </label>
+                                                        </div>    
+                                            </div>
+                                            <div class="col-md-4">
+                                                <button type="submit" class="btn btn-primary btn-block" name="ce_btn" value="exchange">[#lang_btn_17]</button>
+                                            </div>
+                                        </div>
+                                            <input type="hidden" name="ce_rate_from" id="ce_rate_from" value="[@rate_from]">
+                                            <input type="hidden" name="ce_rate_to" id="ce_rate_to" value="[@rate_to]">
+                                            <input type="hidden" name="ce_currency_from" id="ce_currency_from" value="[@currency_from]">
+                                            <input type="hidden" name="ce_currency_to" id="ce_currency_to" value="[@currency_to]">
+                                            <input type="hidden" name="ce_gateway_send" id="ce_gateway_send" value="[@gateway_send_id]"> 
+                                            <input type="hidden" name="ce_gateway_receive" id="ce_gateway_receive" value="[@gateway_receive_id]">
+                                            <input type="hidden" name="ce_sic1" id="ce_sic1" value="[@sic1]">
+                                            <input type="hidden" name="ce_sic2" id="ce_sic2" value="[@sic2]">
+                                            <input type="hidden" name="ce_amount_receive" id="ce_amount_receive2" value="[@amount_receive]">
+                                            <input type="hidden" name="ce_amount_send" id="ce_amount_send2" value="[@amount_send]">
+                            </form>
+                            <script type="text/javascript">
+                                setInterval(function(){ 
+                                    $("#exrateupdate").show();
+                                    ce_load_rate2();
+                                    console.log("Autoupdate exchange rate...");
+                                 }, [@autoupdateinterval]);
+                            </script>
+                        </div>
+                        <!--/.inner-box-->
+                </div>
+                <div class="col-md-3 hidden-xs hidden-sm">
+                    
+                            [@UserMenu]
+
+                                <!--/.inner-box-->
+                </div>
+            </div>
+        </div>
+</div>
+</div>

@@ -1,0 +1,59 @@
+<div class="inner-box">
+        <div class="btn btn-primary" style="    background: darkgray; text-align: left; color: white; width: 100%; line-height:10px; height:40px;"><h4><i class="fas fa-chart-bar"></i> [#lang_title_your_statistics]</h4></div>
+<br>
+<br>
+        <div class="row">
+            <div class="col-md-4">
+                <div class="panel panel-stats">
+                    <div class="panel-body">
+                        <center>
+                            <i class="fa fa-refresh fa-3x"></i><br/><br/>
+                            <h3>[#lang_total_exchanges]<br/><small>[@my_exchanges_num]</small></h3>
+                        </center>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                    <div class="panel panel-stats">
+                            <div class="panel-body">
+                                <center>
+                                    <i class="fa fa-user-plus fa-3x"></i><br/><br/>
+                                    <h3>[#lang_total_referrals]<br/><small>[@my_referrals_num]</small></h3>
+                                </center>
+                            </div>
+                        </div>
+            </div>
+            <div class="col-md-4">
+                    <div class="panel panel-stats">
+                            <div class="panel-body">
+                                <center>
+                                    <i class="fa fa-percent fa-3x"></i><br/><br/>
+                                    <h3>[#lang_discount_level]<br/><small>[@discount_level]</small></h3>
+                                </center>
+                            </div>
+                        </div>
+            </div>
+        </div>
+    </div>
+
+<div class="inner-box">
+        <div class="btn btn-primary" style="    background: darkgray; text-align: left; color: white; width: 100%; line-height:10px; height:40px;">
+        <h4><i class="fa fa-exchange"></i> [#lang_title_latest_exchanges]</h4>
+        </div>
+
+        <div class="table-responsive">
+            <table class="table table-striped">
+                <thead>
+                    <tr>
+                        <th>[#lang_tb_send]</th>
+                        <th>[#lang_tb_receive]</th>
+                        <th>[#lang_tb_status]</th>
+                        <th>[#lang_tb_details]</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    [@exchanges_list]
+                </tbody>
+            </table>
+        </div>
+</div>

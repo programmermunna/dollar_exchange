@@ -1,0 +1,61 @@
+<div class="inner-box">
+        <h2 class="title-2"><i class="fa fa-cogs"></i> [#lang_menu_title_settings] <i class="fa fa-long-arrow-right"></i> <i class="fa fa-check-square-o"></i> [#lang_menu_verification] <i class="fa fa-long-arrow-right"></i> <i class="fa fa-at"></i> [#lang_menu_email]</h2>
+        [@eresults]
+        [@EmailVerificationForm]
+</div>
+
+<div class="inner-box">
+        <h2 class="title-2"><i class="fa fa-cogs"></i> [#lang_menu_title_settings] <i class="fa fa-long-arrow-right"></i> <i class="fa fa-check-square-o"></i> [#lang_menu_verification] <i class="fa fa-long-arrow-right"></i> <i class="fa fa-file-o"></i> [#lang_menu_identify]</h2>
+       
+        <p>[#lang_info_4]</p>
+        <hr>
+        <h3>[#lang_title_upload]</h3>
+        [@dresults]
+        <form action="" method="POST" enctype="multipart/form-data">
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="form-group">
+                        <label>[#lang_field_22]</label>
+                        <select class="form-control" name="document_type">
+                                <option value="1">[#lang_doc_type_1]</option>
+                                <option value="2">[#lang_doc_type_2]</option>
+                                <option value="3">[#lang_doc_type_3]</option>
+                                <option value="4">[#lang_doc_type_4]</option>
+                                <option value="5">[#lang_doc_type_5]</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="form-group">
+                        <label>[#lang_field_23]</label>
+                        <input type="text" class="form-control" name="document_number">
+                    </div>
+                </div>
+                <div class="col-md-12">
+                    <div class="form-group">
+                        <label>[#lang_field_24]</label>
+                        <textarea class="form-control" name="additional_information" rows="2"></textarea>
+                    </div>
+                </div>
+                <div class="col-md-12">
+                    <div class="form-group">
+                        <label>[#lang_field_25]</label>
+                        <input type="file" class="form-control" name="uploadFile">
+                        <small>[#lang_field_25_info]</small>
+                    </div>
+                </div>
+                <div class="col-md-12">
+                    <button type="submit" class="btn btn-primary" name="ce_btn" value="upload_doc">[#lang_btn_3]</button>
+                </div>
+            </div>
+        </form>
+        <hr>
+        <h3>[#lang_title_documents]</h3>
+        <div class="table-responsive">
+            <table class="table table-striped">
+                <tbody>
+                    [@dfiles]
+                </tbody>
+            </table>
+        </div>
+</div>

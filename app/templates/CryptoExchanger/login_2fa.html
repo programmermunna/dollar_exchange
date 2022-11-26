@@ -1,0 +1,59 @@
+
+    <div class="main-container">
+            <div class="container">
+                <div class="row">
+                    <div class="col-sm-5 login-box">
+                        <div class="card card-default">
+                            <div class="panel-intro text-center">
+                                <h2 class="logo-title">
+                                    <!-- Original Logo will be placed here  -->
+                                    <i class="fa fa-lock"></i> [#lang_title_two_factor_auth]
+                                </h2>
+                            </div>
+                            <div class="card-body">
+
+                                [@results]
+                                
+                                <form role="form" action="" method="POST">
+                                    <div class="form-group">
+                                        <label for="sender-email" class="control-label">[#lang_field_26]:</label>
+    
+                                        <div class="input-icon"><i class="icon-user fa"></i>
+                                            <input id="sender-email" type="text" placeholder="Email address"
+                                                   class="form-control email" name="email" disabled value="[@u_email]">
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="user-pass" class="control-label">[#lang_field_31]:</label>
+    
+                                        <div class="input-icon"><i class="icon-lock fa"></i>
+                                            <input type="text" class="form-control" placeholder="XXXXXX"
+                                                   id="user-pass" name="acode">
+                                        </div>
+                                    </div>
+    
+    
+                                    <div class="form-group">
+                                        <button type="submit" name="ce_btn" value="authorize" class="btn btn-primary  btn-block">[#lang_btn_18]</a>
+                                    </div>
+    
+                                
+                            </div>
+                            <div class="card-footer">
+    
+                                
+    
+    
+                                <p class="text-center pull-right">
+                                    <button type="submit" name="ce_btn" value="resend" class="btn btn-outline">[#lang_btn_19]</button>
+                                </p>
+    
+                                <div style=" clear:both"></div>
+                            </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- /.main-container -->

@@ -1,0 +1,23 @@
+<div class="inner-box">
+    <h2 class="title-2"><i class="fa fa-plus"></i> [#lang_title_submit_a_ticket]</h2>
+
+    [@results]
+    
+    <form action="" method="POST">
+        <div class="form-group">
+            <label>[#lang_field_6]</label>
+            <input type="text" class="form-control" name="title">
+        </div>
+        <div class="form-group">
+            <label>[#lang_field_3]</label>
+            <select class="form-control" name="order_id">
+                [@orders_list]
+            </select>
+        </div>
+        <div class="form-group">
+            <label>[#lang_field_7]</label>
+            <textarea class="cleditor" id="cleditor" name="message"></textarea>
+        </div>
+        <button type="submit" class="btn btn-primary" name="ce_btn" value="submit_ticket">[#lang_btn_3]</button>
+    </form>
+</div>

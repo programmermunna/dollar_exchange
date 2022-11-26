@@ -1,0 +1,57 @@
+<div class="inner-box">
+        <h2 class="title-2"><i class="fa fa-refresh"></i> [#lang_title_exchanges]</h2>
+        
+        <form action="" method="POST">
+            <div class="row">
+                    <div class="col-md-6">
+                            <div class="form-group">
+                                <input type="text" class="datepicker-input form-control" id="datepicker" data-date-format="dd-mm-yyyy" name="date_from" placeholder="dd-mm-yyyy">
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                                <div class="form-group">
+                                    <input type="text" class="datepicker-input form-control" id="datepicker2" data-date-format="dd-mm-yyyy" name="date_to" placeholder="dd-mm-yyyy">
+                                </div>
+                            </div>
+                <div class="col-md-6">
+                    <div class="form-group">
+                            <select class="form-control" name="status">
+									<option value="ALL">[#lang_select_all_exchanges]</option>
+									<option value="4">[#lang_status_order_4]</option>
+									<option value="3">[#lang_status_order_3]</option>
+									<option value="1">[#lang_status_order_1]</option>
+									<option value="2">[#lang_status_order_2]</option>
+									<option value="5">[#lang_status_order_5]</option>
+									<option value="6">[#lang_status_order_6]</option>
+								</select>
+                    </div>
+                </div>
+                        <div class="col-md-6">
+                            <div class="input-group">
+                                <input type="text" class="form-control" name="amount" placeholder="[#lang_field_1]">
+                                <div class="input-group-append">
+                                        <button type="submit" class="btn btn-primary" name="ce_filter" value="exchanges">[#lang_btn_4]</button>
+                                      </div>
+                            </div>
+                        </div>
+            </div>
+        </form>
+
+        <div class="table-responsive">
+            <table class="table table-striped">
+                <thead>
+                    <tr>
+                        <th>[#lang_tb_send]</th>
+                        <th>[#lang_tb_receive]</th>
+                        <th>[#lang_tb_status]</th>
+                        <th>[#lang_tb_details]</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    [@exchanges_list]
+                </tbody>
+            </table>
+        </div>
+
+        [@pages]
+</div>

@@ -1,0 +1,33 @@
+<script type="text/javascript">
+    function check_payment() {
+        var data_url = "[@url]app/requests/check_payment.php?a=blockio&order_id=[@order_id]";
+        $.ajax({
+            type: "GET",
+            url: data_url,
+            dataType: "json",
+            success: function (data) {
+                if(data.status == "success") {
+                    $("#paymentbox_[@order_id]").html(data.html);
+                } else {
+                    if(data.timeout == "1") {
+                        $("#paymentbox_[@order_id]").html(data.html);    
+                    } else {
+                        $("#status_[@order_id]").html(data.msg);
+                    }
+                }
+            }
+        });
+    }
+
+    setInterval(check_payment,3000);
+</script>
+<center>
+    <img src="[@gateway_icon]" width="72px"><br/><br/>
+    <div id="paymentbox_[@order_id]">
+    [#lang_pay] <b>[@amount] [@currency]</b> [#lang_to]<br/>
+    <b>[@address]</b><br/><br/>
+    <img src="https://chart.googleapis.com/chart?chs=150x150&cht=qr&chl=bitcoin:[@address]?amount=[@amount]&choe=UTF-8" width="300px"><br/><br/>
+    <span id="status_[@order_id]"><i class="fa fa-spin fa-spinner"></i> [#lang_awaiting_payment]...</span>
+    </div>
+    <div id="paymentstatus_[@order_id]"></div>
+</center>

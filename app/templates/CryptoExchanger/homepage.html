@@ -1,0 +1,233 @@
+<div style="margin-left: 13px; margin-right: 11px; background: Green;">
+<marquee style="color: #fff; font-size: 11px; margin-top: 3px;"> <b><span style="color: yellow"> নোটিশঃ </span>  💼 Working: 10:00 AM To 10:00 PM
+
+- রাত 10 PM এরপর কেউ ডলার ক্রয় করার জন্য অথবা বিক্রয় করার জন্য অর্ডার করলে,                    
+         
+          🌅সকাল 10 AM পর কমপ্লিট করা হবে।
+
+আমাদের সাথে থাকার জন্য সবাইকে ধন্যবাদ।  </b> </marquee>
+</div>
+</div>																			<!-- main -->
+	<section id="main" class="clearfix home-default">
+		<div class="">
+		 <!-- Modified Script by atopwallet.com -->
+<div class="accordion md-accordion accordion-blocks" id="accordionEx78" role="tablist" aria-multiselectable="true">  
+	<div style="background: linear-gradient(#1f6142,#1f6142);">
+	<div class="main-container" style="background-image: url('/app/templates/CryptoExchanger/images/bg-bottom.jpg')">
+				<div class="container">
+					<div class="row">
+						<div class="col-md-12 page-content">
+						   <div class="btn btn" style="text-align: center; background-image: linear-gradient(182deg,rgb(92 110 73) 20%,#3949AB 100%) !important; font-size: 16px; color: white; width: 100%; height:40px;"><strong><marquee behavior="scroll" direction="left"><font color="white"><b><font color="#FD1C03">Notice:-</font>আমাদের সাইটে সর্বনিম্ন ১০ ডলার বিক্রি করতে পারবেন এবং সর্বনিম্ন ১০০০ টাকা ডলার কিনতে পারবেন।
+
+</b></font> </marquee></strong></div>
+							<div class="inner-box" style="background: linear-gradient(#b38f00, #66cc99);">
+							<h4 class="title-2"> <center><span class="pull-center" style="text-align: center; font-size: 14px; color: yellow; font-family: Roboto Condensed, Helvetica, Arial, sans-serif; font-weight: normal;"><b>Exchange Instantly - 5 minutes To (30 minutes max) </b></span></center></h4>
+								<form id="CE_ExForm">
+								<div class="row" style="margin:10px;">
+									<div class="col-md-2 hidden-xs hidden-sm">
+										<center>
+											<img id="ce_send_img" src="[@send_icon]" class="img-circle cryptoexchanger-icon" width="72px" height="72px">
+										</center>
+									</div>
+									<div class="col-md-4">
+										<div class="form-group">
+											<label style="font-size: 16px;"><i class="fa fa-arrow-down"></i> [#lang_send]</label>
+											<select class="form-control cryptoexchanger-select" name="ce_gateway_send" id="ce_gateway_send" onChange="ce_refresh(1,this.value);">
+													[@send_list]
+											</select>
+										</div>
+										<div class="form-group">
+											<input type="text" class="form-control cryptoexchanger-input" id="ce_amount_send" name="ce_amount_send" value="[@am_send]" onkeyup="ce_calculator(1);" onkeydown="ce_calculator(1);">
+										</div>
+										<span class="pull-right"><small>[#lang_exchange_rate]: <span id="ce_exchange_rate">[@rate_from] [@currency_from] = [@rate_to] [@currency_to]</span></small></span>
+									</div>
+									<div class="col-md-4">
+										<div class="form-group">
+											<label style="font-size:18px"><i class="fa fa-arrow-up"></i> [#lang_receive]</label>
+											<select class="form-control cryptoexchanger-select" name="ce_gateway_receive" id="ce_gateway_receive" onChange="ce_refresh(2,this.value);">
+													[@receive_list]
+											</select>
+										</div>	
+										<div class="form-group">
+												<input type="text" class="form-control cryptoexchanger-input" id="ce_amount_receive" name="ce_amount_receive" value="[@am_receive]" onkeyup="ce_calculator(2);" onkeydown="ce_calculator(2);">
+											</div>
+											<span><small>[#lang_reserve]: <span id="ce_reserve_text">[@reserve] [@currency_to]</span></small></span>
+									</div>
+									<div class="col-md-2 hidden-xs hidden-sm">
+										<center>
+											<img id="ce_receive_img" src="[@receive_icon]" class="img-circle cryptoexchanger-icon" width="72px" height="72px">
+										</center>
+									</div>
+									<div class="col-md-12">
+											<input type="hidden" name="ce_rate_from" id="ce_rate_from" value="[@rate_from]">
+											<input type="hidden" name="ce_rate_to" id="ce_rate_to" value="[@rate_to]">
+											<input type="hidden" name="ce_currency_from" id="ce_currency_from" value="[@currency_from]">
+											<input type="hidden" name="ce_currency_to" id="ce_currency_to" value="[@currency_to]">
+											<input type="hidden" name="ce_reserve" id="ce_reserve" value="[@reserve]">
+											<input type="hidden" name="ce_amount_send2" id="ce_amount_send2" value="[@am_send]">
+											<input type="hidden" name="ce_amount_receive2" id="ce_amount_receive2" value="[@am_receive]">
+											<input type="hidden" name="ce_sic1" id="ce_sic1" value="[@sic1]">
+											<input type="hidden" name="ce_sic2" id="ce_sic2" value="[@sic2]">
+										<br>
+										<center>
+											<button type="button" id="ce_exbtn" onclick="ce_exchange('#CE_ExForm');" style="    background: darkgray;" class="btn btn-primary btn-lg"><i class="fa fa-refresh fa-spin"></i> [#lang_btn_17]</button>
+											<span id="ce_status_loading" style="display:none;"><br><br><span class="badge badge-info cryptoexchanger-badge-text"><i class="fa fa-spin fa-spinner"></i> [#lang_please_wait]...</span></span>
+											<span id="ce_status"></span>
+										</center>
+									</div>
+								</div>
+							</form>
+							</div>
+						</div>
+
+						
+						<div class="col-md-4">
+
+	<section id="main" class="clearfix home-default">
+	
+					</div>
+				</div>
+			</div>
+
+<div class="main-container">
+    	<div class="container">
+		    <div class="btn btn-danger btn-block no-border" style="background: linear-gradient(135deg,#006796,#006796); text-align: left; color: white; width: 100%; font-size: 16px; text-align:center;"><strong><i class=" icon-money"> </i> Dollar Buy Sell Rate</strong> </div>
+<div class="accordion md-accordion accordion-blocks" id="accordionEx78" role="tablist" aria-multiselectable="true">
+
+<div class="card-body" style="background: #ffffff">
+<div class="table-responsive" style="margin-top:-15px">
+<style>
+table {
+  font-family: arial, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+}
+
+td, th {
+  text-align: left;
+  padding: 5px 10px;
+}
+
+tr:nth-child(even) {
+  background-color: #dddddd;
+}
+</style>
+<table>
+<tbody><tr>
+<th>Gateways</th>
+<th>Sell </th>
+<th>Buy </th>
+</tr>
+<tr style="font-size: 15px">
+<td><img src="https://www.ipsewallet.com/uploads/1650330206_icon.png" width="30px" height="30px" class="img-circle pull-left">  <b style="font-size: 14px; padding: 0px 5px 0px 5px">Bitcoin
+<span style="color: #75a3a3">(USD)</span></b></td>
+<td><b>105</b> TK</td>
+<td><b>118</b> TK</td>
+</tr><tr style="font-size: 15px">
+<td><img src="https://www.ipsewallet.com/uploads/1650331072_icon.png" width="30px" height="30px" class="img-circle pull-left">  <b style="font-size: 14px; padding: 0px 5px 0px 5px">Litecoin
+<span style="color: #75a3a3">(USD)</span></b></td>
+<td><b>105</b> TK</td>
+<td><b>118</b> TK</td>
+</tr><tr style="font-size: 15px">
+<td><img src="https://www.ipsewallet.com/uploads/1650330717_icon.png" width="30px" height="30px" class="img-circle pull-left">  <b style="font-size: 14px; padding: 0px 5px 0px 5px">Ethereum
+<span style="color: #75a3a3">(USD)</span></b></td>
+<td><b>105</b> TK</td>
+<td><b>118</b> TK</td>
+</tr><tr style="font-size: 15px">
+<td><img src="https://www.ipsewallet.com/uploads/1650331340_icon.png" width="30px" height="30px" class="img-circle pull-left">  <b style="font-size: 14px; padding: 0px 5px 0px 5px">USDT (TRC20)
+<span style="color: #75a3a3">(USD)</span></b></td>
+<td><b>105</b> TK</td>
+<td><b>118</b> TK</td>
+</tr><tr style="font-size: 15px">
+<td><img src="https://www.ipsewallet.com/uploads/1650331634_icon.png" width="30px" height="30px" class="img-circle pull-left">  <b style="font-size: 14px; padding: 0px 5px 0px 5px">USDT (BEP20)
+<span style="color: #75a3a3">(USD)</span></b></td>
+<td><b>105</b> TK</td>
+<td><b>118</b> TK</td>
+</tr><tr style="font-size: 15px">
+<td><img src="https://www.ipsewallet.com/uploads/1650332144_icon.png" width="30px" height="30px" class="img-circle pull-left">  <b style="font-size: 14px; padding: 0px 5px 0px 5px">BUSD (BEP20)
+<span style="color: #75a3a3">(USD)</span></b></td>
+<td><b>105</b> TK</td>
+<td><b>118</b> TK</td>
+</tr><tr style="font-size: 15px">
+<td><img src="https://www.ipsewallet.com/uploads/1650331925_icon.png" width="30px" height="30px" class="img-circle pull-left">  <b style="font-size: 14px; padding: 0px 5px 0px 5px">Tron (TRX)
+<span style="color: #75a3a3">(USD)</span></b></td>
+<td><b>105</b> TK</td>
+<td><b>118</b> TK</td>
+</tr><tr style="font-size: 15px">
+<td><img src="https://www.ipsewallet.com/uploads/1650332450_icon.png" width="30px" height="30px" class="img-circle pull-left">  <b style="font-size: 14px; padding: 0px 5px 0px 5px">Smart Chain (BNB)
+<span style="color: #75a3a3">(USD)</span></b></td>
+<td><b>105</b> TK</td>
+<td><b>118</b> TK</td>
+</tr><tr style="font-size: 15px">
+<td><img src="https://www.ipsewallet.com/uploads/1650332752_icon.png" width="30px" height="30px" class="img-circle pull-left">  <b style="font-size: 14px; padding: 0px 5px 0px 5px">Bitcoin Cash
+<span style="color: #75a3a3">(USD)</span></b></td>
+<td><b>90</b> TK</td>
+<td><b>118</b> TK</td>
+</tr><tr style="font-size: 15px">
+<td><img src="https://www.ipsewallet.com/uploads/1650333031_icon.png" width="30px" height="30px" class="img-circle pull-left">  <b style="font-size: 14px; padding: 0px 5px 0px 5px">Ripple (XRP)
+<span style="color: #75a3a3">(USD)</span></b></td>
+<td><b>90</b> TK</td>
+<td><b>118</b> TK</td>
+</tr><tr style="font-size: 15px">
+<td><img src="https://www.ipsewallet.com/uploads/1650333211_icon.png" width="30px" height="30px" class="img-circle pull-left">  <b style="font-size: 14px; padding: 0px 5px 0px 5px">Dogecoin
+<span style="color: #75a3a3">(USD)</span></b></td>
+<td><b>90</b> TK</td>
+<td><b>118</b> TK</td>
+</tr><tr style="font-size: 15px">
+<td><img src="https://www.ipsewallet.com/uploads/1650339044_icon.png" width="30px" height="30px" class="img-circle pull-left">  <b style="font-size: 14px; padding: 0px 5px 0px 5px">Perfect Money
+<span style="color: #75a3a3">(USD)</span></b></td>
+<td><b>100</b> TK</td>
+<td><b>115</b> TK</td>
+</tr>
+</tbody></table>
+</div>
+</div>
+</div>
+				    
+					</div>
+    <div class="main-container">
+			<div class="container">
+			    
+			    
+				<div class="row">
+			    <div class="col-md-8">
+			        <h3 class="btn btn-block no-border text-center" style="color: white; font-size: 20px; background: linear-gradient(135deg,#006796,#006796);">[#lang_title_our_reserve]</h3><br>
+			        <div class="row">
+			            [@reserve_list]
+			        </div>
+			        
+			        </div>
+						
+						
+			    <div class="col-md-4">
+                    <h3 class="btn btn-block no-border text-center" style="color: white; font-size: 20px; background: linear-gradient(135deg,#006796,#006796);">[#lang_title_reviews]<a href="/reviews" class="btn btn-primary pull-right no-border" style="    background: darkgray; color: white;">
+                        <i class="icon-star fa"></i> <span>Check All</span> </a></h3>
+                         <br>
+                         <div class="row"> [@reviews]</div>
+                        </div>
+                              <br>
+			                
+             </div>
+                </div>
+                </div>
+			</div>
+	
+		
+		
+		<div class="main-container">
+				<div class="container">
+					<div class="row">
+						<div class="col-md-12">
+                    <h3 class="btn btn-block no-border text-center" style="color: white; font-size: 20px; background: linear-gradient(135deg,#006796,#006796);">[#lang_title_latest_exchanges]</h3><br></div>
+						
+						[@latest_exchanges]
+					</div>
+				</div>
+			</div>
+		
+		
+	
+</div>
+
+
+																		
