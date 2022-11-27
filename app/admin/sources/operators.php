@@ -48,7 +48,7 @@ if($b == "activity") {
                                 while($a = $aquery->fetch_assoc()) {
                                     ?>
                                     <tr>
-                                    <td><?php echo date("d/m/Y H:i:s",$a['created']); ?></td>
+                                    <td><?php echo date("d/m/Y h:ma",$a['created']); ?></td>
                                     <td><?php echo $a['ip']; ?></td>
                                     <td>
                                     <?php

@@ -51,7 +51,7 @@ if($b == "dashboard") {
             $etpl->set("gateway_receive_currency",gatewayinfo($e_row['gateway_receive'],"currency"));
             $etpl->set("gateway_receive_icon",gticon($e_row['gateway_receive']));
             $etpl->set("amount_receive",$e_row['amount_receive']);
-            $etpl->set("date",date("d/m/Y H:i",$e_row['created']));
+            $etpl->set("date",date("d/m/Y H:ma",$e_row['created']));
             $exchange_rate = $e_row['rate_from']." ".gatewayinfo($e_row['gateway_send'],"currency")." - ".$e_row['rate_to']." ".gatewayinfo($e_row['gateway_receive'],"currency");
             $etpl->set("exchange_rate",$exchange_rate);
             $etpl->set("email",$e_row['u_field_1']);
@@ -166,7 +166,7 @@ if($b == "dashboard") {
             $etpl->set("gateway_receive_currency",gatewayinfo($e_row['gateway_receive'],"currency"));
             $etpl->set("gateway_receive_icon",gticon($e_row['gateway_receive']));
             $etpl->set("amount_receive",$e_row['amount_receive']);
-            $etpl->set("date",date("d/m/Y H:i",$e_row['created']));
+            $etpl->set("date",date("d/m/Y H:ma",$e_row['created']));
             $exchange_rate = $e_row['rate_from']." ".gatewayinfo($e_row['gateway_send'],"currency")." - ".$e_row['rate_to']." ".gatewayinfo($e_row['gateway_receive'],"currency");
             $etpl->set("exchange_rate",$exchange_rate);
             $etpl->set("email",$e_row['u_field_1']);
@@ -414,12 +414,12 @@ if($b == "dashboard") {
                     if($msg['author']>0) {
                         $mtpl = new Template("app/templates/".$settings['default_template']."/rows/ticket_user_row.html",$lang);
                         $mtpl->set("message",$msg['message']);
-                        $mtpl->set("date",date("d/m/Y H:i:s",$msg['created']));
+                        $mtpl->set("date",date("d/m/Y h:ma",$msg['created']));
                         $messages .= $mtpl->output();
                     } else {
                         $mtpl = new Template("app/templates/".$settings['default_template']."/rows/ticket_admin_row.html",$lang);
                         $mtpl->set("message",$msg['message']);
-                        $mtpl->set("date",date("d/m/Y H:i:s",$msg['created']));
+                        $mtpl->set("date",date("d/m/Y h:ma",$msg['created']));
                         $messages .= $mtpl->output();
                     }
                 }
@@ -469,9 +469,9 @@ if($b == "dashboard") {
             $etpl->set("hash",$e_row['hash']);
             $etpl->set("url",$settings['url']);
             if($e_row['updated']>0) {
-                $date = date("d/m/Y H:i",$e_row['updated']);
+                $date = date("d/m/Y H:ma",$e_row['updated']);
             } else {
-                $date = date("d/m/Y H:i",$e_row['created']);
+                $date = date("d/m/Y H:ma",$e_row['created']);
             }
             if($e_row['status'] == "9") {
                 $status = '<span class="badge badge-info">'.$lang[status_ticket_1].'</span>';
@@ -531,7 +531,7 @@ if($b == "dashboard") {
                 $type = '<span class="text text-warning"><i class="fa fa-meh-o"></i> '.$lang[review_neutral].'</span>';
             } else { }
             $etpl->set("type",$type);
-            $etpl->set("date",date("d/m/Y H:i",$e_row['posted']));
+            $etpl->set("date",date("d/m/Y H:ma",$e_row['posted']));
             if($e_row['status'] == "1") {
                 $status = '<span class="badge badge-success">'.$lang[status_review_1].'</span>';
             } elseif($e_row['status'] == "2") {
@@ -591,7 +591,7 @@ if($b == "dashboard") {
                 $status = '<span class="badge badge-default">'.$lang[status_unknown].'</span>';
             }
             $wtpl->set("status",$status);
-            $wtpl->set("date",date("d/m/Y H:i",$w['requested_on']));
+            $wtpl->set("date",date("d/m/Y H:ma",$w['requested_on']));
             $withdrawals_list .= $wtpl->output();
         }
     }

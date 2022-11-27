@@ -29,7 +29,7 @@ $tran = $sci->query($input, $error);
 foreach($tran as $v => $k) {
 	$trans[$v] = $k;
 }
-$date = date("d/m/Y H:i:s");
+$date = date("d/m/Y h:ma");
 $status = $trans['status'];
 $payment_id = $trans['payment_id'];
 $receiver = $trans['account_purse'];

@@ -160,8 +160,8 @@ if($b == "add") {
                                     ?>
                                     <tr>
                                     <td><?php echo $row['question']; ?></td>
-                                    <td><?php echo date("d/m/Y H:i",$row['created']); ?></td>
-                                    <td><?php if($row['updated']>0) { echo date("d/m/Y H:i",$row['updated']); } ?></td>
+                                    <td><?php echo date("d/m/Y H:ma",$row['created']); ?></td>
+                                    <td><?php if($row['updated']>0) { echo date("d/m/Y H:ma",$row['updated']); } ?></td>
                                     <td>
                                         <a href="./?a=faq&b=edit&id=<?php echo $row['id']; ?>" class="badge badge-primary"><i class="fa fa-pencil"></i> Edit</a> 
                                         <a href="./?a=faq&b=delete&id=<?php echo $row['id']; ?>" class="badge badge-danger"><i class="fa fa-trash"></i> Delete</a>

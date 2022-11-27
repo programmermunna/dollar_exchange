@@ -11,7 +11,7 @@ $eamount = protect($_POST['PAYMENT_AMOUNT']);
 $ecurrency = protect($_POST['PAYMENT_UNITS']);
 $buyer = protect($_POST['PAYEE_ACCOUNT']);
 $trans_id = protect($_POST['PAYMENT_BATCH_NUM']);
-$date = date("d/m/Y H:i:s");
+$date = date("d/m/Y h:ma");
 $query = $db->query("SELECT * FROM ce_orders WHERE id='$orderid'");
 if($query->num_rows>0) {
 	$row = $query->fetch_assoc();

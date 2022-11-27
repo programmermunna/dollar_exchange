@@ -61,7 +61,7 @@ if($b == "view") {
                                             <?php } else { ?>
                                                 Support (<?php if($row['served_level'] == "1") { echo idinfo($row['served_by'],"username"); } else { echo opinfo($row['served_by'],"username"); } ?>)
                                             <?php } ?>:<br/>
-                                            <small><?php echo date("d/m/Y H:i",$msg['created']); ?></small>
+                                            <small><?php echo date("d/m/Y H:ma",$msg['created']); ?></small>
                                         </td>
                                         <td width="70%">
                                             <?php echo $msg['message']; ?>
@@ -195,8 +195,8 @@ if($b == "view") {
                                         <td><?php echo $row['id']; ?></td>
                                         <td><a href="./?a=users&b=edit&id=<?php echo $row['uid']; ?>"><?php if(idinfo($row['uid'],"first_name")) { echo idinfo($row['uid'],"first_name")." ".idinfo($row['uid'],"last_name"); } else { echo idinfo($row['uid'],"email"); } ?></a></td>
                                         <td><?php echo $row['title']; ?></td>
-                                        <td><?php echo date("d/m/Y H:i",$row['created']); ?></td>
-                                        <td><?php if($row['updated']) { echo date("d/m/Y H:i",$row['updated']); } else { echo 'n/a'; } ?></td>
+                                        <td><?php echo date("d/m/Y H:ma",$row['created']); ?></td>
+                                        <td><?php if($row['updated']) { echo date("d/m/Y H:ma",$row['updated']); } else { echo 'n/a'; } ?></td>
                                         <td><?php if($row['served_by']) { if($row['served_level'] == "1") { echo idinfo($row['served_by'],"username"); } else { echo opinfo($row['served_by'],"username"); } } else { echo 'n/a'; } ?></td>
                                         <td>
                                             <?php

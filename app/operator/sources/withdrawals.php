@@ -162,7 +162,7 @@ if($b == "approve") {
                               <td><?php echo gatewayinfo($row['gateway'],"name")." ".gatewayinfo($row['gateway'],"currency"); ?></td>
                               <td><?php echo $row['account']; ?></td>
                               <td><?php echo $row['amount']." ".$row['currency']; ?></td>
-                              <td><?php echo date("d/m/Y H:i",$row['requested_on']); ?></td>
+                              <td><?php echo date("d/m/Y H:ma",$row['requested_on']); ?></td>
                               <td>
                                     <?php
                                     if($row['status'] == "1") {

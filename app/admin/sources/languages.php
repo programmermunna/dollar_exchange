@@ -51,7 +51,7 @@ if($b == "set_default") {
 						else {
 						$contents = '<?php
 // '.$id.' Language for CryptoExchanger PHP Script
-// Last update: '.date("d/m/Y H:i").'
+// Last update: '.date("d/m/Y H:ma").'
 $lang = array();
 ';
 						$key = protect($_POST['key']);
@@ -124,7 +124,7 @@ $lang = array();
 					if(isset($CEAction) && $CEAction == "save") {
 						$contents = '<?php
 // '.$id.' Language for CryptoExchanger PHP Script
-// Last update: '.date("d/m/Y H:i").'
+// Last update: '.date("d/m/Y H:ma").'
 $lang = array();
 ';
 						$key = protect($_POST['key']);
