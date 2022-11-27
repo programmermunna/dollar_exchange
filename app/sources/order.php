@@ -59,7 +59,7 @@ $tpl->set("status_text",$status['text']);
 $tpl->set("u_email",$row['u_field_1']);
 $tpl->set("rate_from",$row['rate_from']);
 $tpl->set("rate_to",$row['rate_to']);
-$tpl->set("created_date",date("d/n/Y H:i",$row['created']));
+$tpl->set("created_date",date("d/n/Y h:ia",$row['created']));
 $order_rows = '';
 if(gatewayinfo($row['gateway_receive'],"manual_payment") == "1"  or gatewayinfo($row['gateway_receive'],"external_gateway") == "1") {
     $CheckFields = $db->query("SELECT * FROM ce_gateways_fields WHERE gateway_id='$row[gateway_receive]' ORDER BY id");

@@ -33,7 +33,7 @@ $reviews_list = '';
             $retpl->set("review_icon",$review_icon);
             $retpl->set("display_name",$review['display_name']);
             $retpl->set("comment",$review['comment']);
-            $retpl->set("date",date("d/m/Y h:ma",$review['posted']));
+            $retpl->set("date",date("d/m/y h:ia",$review['posted']));
             $reviews_list .= $retpl->output();
         }
     }

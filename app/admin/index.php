@@ -1,4 +1,5 @@
 <?php
+date_default_timezone_set("Asia/Dhaka");
 define('CryptExchanger_INSTALLED',TRUE);
 ob_start();
 session_start();

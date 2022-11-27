@@ -105,7 +105,7 @@ Operator status: <?php if($settings['operator_status'] == "1") { ?><span class="
                               <td><img src="<?php echo gticon($row['gateway_receive']); ?>" width="24px" height="24px">  <?php echo gatewayinfo($row['gateway_receive'],"name"); ?> (<?php echo $row['amount_receive']." ".gatewayinfo($row['gateway_receive'],"currency"); ?>)</td>
                               <td><?php if($row['uid']) { ?><a href="./?a=users&b=edit&id=<?php echo $row['uid']; ?>"><?php if(idinfo($row['uid'],"first_name")) { echo idinfo($row['uid'],"first_name")." ".idinfo($row['uid'],"last_name"); } else { echo idinfo($row['uid'],"email"); } ?></a><? } else { echo 'none'; } ?></td>
                               <td><?php $status = ce_decodeStatus($row['status']); ?><span class="badge badge-<?php echo $status['style']; ?>"><?php echo $status['text']; ?></span></td>
-                              <td><?php echo date("d/m/Y H:ma",$row['created']); ?></td>
+                              <td><?php echo date("d/m/y h:ia",$row['created']); ?></td>
                               <td>
                                 <a href="./?a=exchange_orders&b=explore&id=<?php echo $row['id']; ?>" class="badge badge-primary"><i class="fa fa-search"></i> Explore</a>
                               </td>
@@ -210,8 +210,8 @@ Operator status: <?php if($settings['operator_status'] == "1") { ?><span class="
                               <td><?php echo $row['id']; ?></td>
                               <td><a href="./?a=users&b=edit&id=<?php echo $row['uid']; ?>"><?php if(idinfo($row['uid'],"first_name")) { echo idinfo($row['uid'],"first_name")." ".idinfo($row['uid'],"last_name"); } else { echo idinfo($row['uid'],"email"); } ?></a></td>
                               <td><?php echo $row['title']; ?></td>
-                              <td><?php echo date("d/m/Y H:ma",$row['created']); ?></td>
-                              <td><?php if($row['updated']) { echo date("d/m/Y H:ma",$row['updated']); } else { echo 'n/a'; } ?></td>
+                              <td><?php echo date("d/m/y h:ia",$row['created']); ?></td>
+                              <td><?php if($row['updated']) { echo date("d/m/y h:ia",$row['updated']); } else { echo 'n/a'; } ?></td>
                               <td><?php if($row['served_by']) { echo idinfo($row['served_by'],"username"); } else { echo 'n/a'; } ?></td>
                               <td>
                                 <?php
@@ -341,7 +341,7 @@ Operator status: <?php if($settings['operator_status'] == "1") { ?><span class="
                                 echo $type;
                                 ?>
                               </td>
-                              <td><?php echo date("d/m/Y H:ma",$row['posted']); ?></td>
+                              <td><?php echo date("d/m/y h:ia",$row['posted']); ?></td>
                               <td>
                                 <a href="./?a=reviews&b=approve&id=<?php echo $row['id']; ?>" class="badge badge-success"><i class="fa fa-check"></i> Approve</a> 
                                 <a href="./?a=reviews&b=cancel&id=<?php echo $row['id']; ?>" class="badge badge-danger"><i class="fa fa-times"></i> Cancel</a>
@@ -431,7 +431,7 @@ Operator status: <?php if($settings['operator_status'] == "1") { ?><span class="
                               <td><?php echo $row['email']; ?></td>
                               <td><?php echo gatewayinfo($row['gateway_id'],"name")." ".gatewayinfo($row['gateway_id'],"currency"); ?></td>
                               <td><?php echo $row['amount']." ".gatewayinfo($row['gateway_id'],"currency"); ?></td>
-                              <td><?php echo date("d/m/Y H:ma",$row['requested_on']); ?></td>
+                              <td><?php echo date("d/m/y h:ia",$row['requested_on']); ?></td>
                               <td>
                                 <a href="./?a=reserve_requests&b=update&id=<?php echo $row['id']; ?>" class="badge badge-success"><i class="fa fa-check"></i> Update</a> 
                                 <a href="./?a=reserve_requests&b=delete&id=<?php echo $row['id']; ?>" class="badge badge-danger"><i class="fa fa-trash"></i> Delete</a>
@@ -482,7 +482,7 @@ Operator status: <?php if($settings['operator_status'] == "1") { ?><span class="
                               <td><?php echo gatewayinfo($row['gateway'],"name")." ".gatewayinfo($row['gateway'],"currency"); ?></td>
                               <td><?php echo $row['account']; ?></td>
                               <td><?php echo $row['amount']." ".$row['currency']; ?></td>
-                              <td><?php echo date("d/m/Y H:ma",$row['requested_on']); ?></td>
+                              <td><?php echo date("d/m/y h:ia",$row['requested_on']); ?></td>
                               <td>
                                 <a href="./?a=withdrawals&b=approve&id=<?php echo $row['id']; ?>" class="badge badge-success"><i class="fa fa-check"></i> Approve</a> 
                                 <a href="./?a=withdrawals&b=cancel&id=<?php echo $row['id']; ?>" class="badge badge-danger"><i class="fa fa-times"></i> Cancel</a>

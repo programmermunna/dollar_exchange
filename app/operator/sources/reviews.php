@@ -139,7 +139,7 @@ if($b == "approve") {
                                 echo $type;
                                 ?>
                               </td>
-                              <td><?php echo date("d/m/Y H:ma",$row['posted']); ?></td>
+                              <td><?php echo date("d/m/y h:ia",$row['posted']); ?></td>
                               <td><?php if($row['status'] == "1") { echo '<span class="badge badge-success">Approved</span>'; } elseif($row['status'] == "2") { echo '<span class="badge badge-primary">Under Review</span>'; } else { echo '<span class="badge badge-danger">Canceled</span>'; } ?></td>
                               <td>
                                 <?php if($row['status'] == "2") { ?>

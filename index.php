@@ -1,4 +1,5 @@
 <?php
+date_default_timezone_set("Asia/Dhaka");
 if(file_exists("./install.php")) {
 	header("Location: ./install.php");
 } 

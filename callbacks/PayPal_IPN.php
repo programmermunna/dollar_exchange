@@ -30,7 +30,7 @@ $payer_email = protect($_POST['payer_email']);
 $query = $db->query("SELECT * FROM ce_orders WHERE id='$item_number'");
 if($query->num_rows>0) {
 	$row = $query->fetch_assoc();
-	$date = date("d/m/Y h:ma");
+	$date = date("d/m/y h:ia");
     $amount = $row['amount_send'];
 	$currency = gatewayinfo($row[gateway_send],"currency");
 	if(checkSession()) { $uid = $_SESSION['eex_uid']; } else { $uid = 0; }

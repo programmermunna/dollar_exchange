@@ -176,15 +176,15 @@ if($b == "explore") {
                                 </tr>
                                 <tr>
                                     <td><b>Order created on:</b></td>
-                                    <td><span class="pull-right"><?php echo date("d/m/Y h:ma",$row['created']); ?></span></td>
+                                    <td><span class="pull-right"><?php echo date("d/m/y h:ia",$row['created']); ?></span></td>
                                 </tr>
                                 <tr>
                                     <td><b>Order updated on:</b></td>
-                                    <td><span class="pull-right"><?php if($row['updated']>0) { echo date("d/m/Y h:ma",$row['updated']); } ?></span></td>
+                                    <td><span class="pull-right"><?php if($row['updated']>0) { echo date("d/m/y h:ia",$row['updated']); } ?></span></td>
                                 </tr>
                                 <tr>
                                     <td><b>Order expired on:</b></td>
-                                    <td><span class="pull-right"><?php if($row['expired']>0) { echo date("d/m/Y h:ma",$row['expired']); } ?></span></td>
+                                    <td><span class="pull-right"><?php if($row['expired']>0) { echo date("d/m/y h:ia",$row['expired']); } ?></span></td>
                                 </tr>
                             </tbody>
                         </table>
@@ -358,7 +358,7 @@ if($b == "explore") {
                                         <tr>
                                             <td><a href="<?php echo $settings['url'].$file['filepath']; ?>" target="_blank"><?php echo $file['filename']; ?></a></td>
                                             <td><?php echo formatBytes($file['filesize']); ?></td>
-                                            <td><?php echo date("d/m/Y H:ma",$file['uploaded']); ?></td>
+                                            <td><?php echo date("d/m/y h:ia",$file['uploaded']); ?></td>
                                         </tr>
                                         <?php
                                     }
@@ -454,7 +454,7 @@ if($b == "explore") {
                                         <td><img src="<?php echo gticon($row['gateway_send']); ?>" width="24px" height="24px"> <?php echo gatewayinfo($row['gateway_send'],"name"); ?> (<?php echo $row['amount_send']." ".gatewayinfo($row['gateway_send'],"currency"); ?>)</td>
                                         <td><img src="<?php echo gticon($row['gateway_receive']); ?>" width="24px" height="24px">  <?php echo gatewayinfo($row['gateway_receive'],"name"); ?> (<?php echo $row['amount_receive']." ".gatewayinfo($row['gateway_receive'],"currency"); ?>)</td>
                                         <td><?php $status = ce_decodeStatus($row['status']); ?><span class="badge badge-<?php echo $status['style']; ?>"><?php echo $status['text']; ?></span></td>
-                                        <td><?php echo date("d/m/Y H:ma",$row['created']); ?></td>
+                                        <td><?php echo date("d/m/y h:ia",$row['created']); ?></td>
                                         <td><?php if($row['processed_by']>0) { ?><a href="./?a=users&b=edit&id=<?php echo $row['processed_by']; ?>"><?php echo idinfo($row['processed_by'],"username"); ?></a><?php } ?></td>
                                         <td>
                                             <a href="./?a=exchange_orders&b=explore&id=<?php echo $row['id']; ?>" class="badge badge-primary"><i class="fa fa-search"></i> Explore</a>

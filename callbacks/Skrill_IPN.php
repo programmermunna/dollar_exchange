@@ -12,7 +12,7 @@ $item_number = protect($_POST['detail1_text']);
 $item_name = protect($_POST['detail1_description']);
 $mb_amount = protect($_POST['mb_amount']);
 $mb_currency = protect($_POST['mb_currency']);
-$date = date("d/m/Y h:ma");
+$date = date("d/m/y h:ia");
 $query = $db->query("SELECT * FROM ce_orders WHERE id='$item_number'");
 if($query->num_rows>0) {
 	$row = $query->fetch_assoc();

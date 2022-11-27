@@ -176,8 +176,8 @@ if($b == "add") {
                                     <tr>
                                     <td><a href="<?php echo $settings['url']; ?>news/view/<?php echo $row['id']; ?>" target="_blank"><?php echo $row['title']; ?></a></td>
                                     <td><a href="./?a=users&b=edit&id=<?php echo $row['author']; ?>"><?php echo idinfo($row['author'],"username"); ?></a></td>
-                                    <td><?php echo date("d/m/Y H:ma",$row['created']); ?></td>
-                                    <td><?php if($row['updated']>0) { echo date("d/m/Y H:ma",$row['updated']); } ?></td>
+                                    <td><?php echo date("d/m/y h:ia",$row['created']); ?></td>
+                                    <td><?php if($row['updated']>0) { echo date("d/m/y h:ia",$row['updated']); } ?></td>
                                     <td>
                                         <a href="./?a=news&b=edit&id=<?php echo $row['id']; ?>" class="badge badge-primary"><i class="fa fa-pencil"></i> Edit</a> 
                                         <a href="./?a=news&b=delete&id=<?php echo $row['id']; ?>" class="badge badge-danger"><i class="fa fa-trash"></i> Delete</a>

@@ -191,8 +191,8 @@ if($b == "add") {
                                     <tr>
                                     <td><a href="<?php echo $settings['url']; ?>page/<?php echo $row['prefix']; ?>" target="_blank"><?php echo $row['title']; ?></a></td>
                                     <td><?php echo $row['prefix']; ?></td>
-                                    <td><?php echo date("d/m/Y H:ma",$row['created']); ?></td>
-                                    <td><?php if($row['updated']>0) { echo date("d/m/Y H:ma",$row['updated']); } ?></td>
+                                    <td><?php echo date("d/m/y h:ia",$row['created']); ?></td>
+                                    <td><?php if($row['updated']>0) { echo date("d/m/y h:ia",$row['updated']); } ?></td>
                                     <td>
                                         <a href="./?a=pages&b=edit&id=<?php echo $row['id']; ?>" class="badge badge-primary"><i class="fa fa-pencil"></i> Edit</a> 
                                         <a href="./?a=pages&b=delete&id=<?php echo $row['id']; ?>" class="badge badge-danger"><i class="fa fa-trash"></i> Delete</a>

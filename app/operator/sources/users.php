@@ -80,7 +80,7 @@ if($b == "doc_accept") {
                                                 </td>
                                                 <td><?php echo $doc['u_field_1']; ?></td>
                                                 <td><?php echo $doc['u_field_2']; ?></td>
-                                                <td><?php echo date("d/m/Y H:ma",$doc['uploaded']); ?></td>
+                                                <td><?php echo date("d/m/y h:ia",$doc['uploaded']); ?></td>
                                                 <td><a href="<?php echo $settings['url'].$doc['document_path']; ?>" target="_blank" class="badge badge-primary"><i class="fa fa-search"></i> Preview</a></td>
                                             </tr>
                                 </tbody>
@@ -168,7 +168,7 @@ if($b == "doc_accept") {
                                                 </td>
                                                 <td><?php echo $doc['u_field_1']; ?></td>
                                                 <td><?php echo $doc['u_field_2']; ?></td>
-                                                <td><?php echo date("d/m/Y H:ma",$doc['uploaded']); ?></td>
+                                                <td><?php echo date("d/m/y h:ia",$doc['uploaded']); ?></td>
                                                 <td><a href="<?php echo $settings['url'].$doc['document_path']; ?>" target="_blank" class="badge badge-primary"><i class="fa fa-search"></i> Preview</a></td>
                                             </tr>
                                 </tbody>
@@ -497,7 +497,7 @@ if($b == "doc_accept") {
                                                 </td>
                                                 <td><?php echo $doc['u_field_1']; ?></td>
                                                 <td><?php echo $doc['u_field_2']; ?></td>
-                                                <td><?php echo date("d/m/Y H:ma",$doc['uploaded']); ?></td>
+                                                <td><?php echo date("d/m/y h:ia",$doc['uploaded']); ?></td>
                                                 <td>
                                                     <?php
                                                     if($doc['status'] == "1") {

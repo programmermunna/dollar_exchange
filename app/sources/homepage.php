@@ -86,7 +86,7 @@ if($NewsQuery->num_rows>0) {
         $newtpl->set("url",$settings['url']);
         $newtpl->set("id",$news['id']);
         $newtpl->set("title",$news['title']);
-        $newtpl->set("date",date("d/m/Y H:ma",$news['created']));
+        $newtpl->set("date",date("d/m/y h:ia",$news['created']));
         $latest_news .= $newtpl->output();
     }
 }
@@ -110,7 +110,7 @@ if($ReviewsQuery->num_rows>0) {
         $retpl->set("review_icon",$review_icon);
         $retpl->set("display_name",$review['display_name']);
         $retpl->set("comment",$review['comment']);
-        $retpl->set("date",date("d/m/Y h:ma",$review['posted']));
+        $retpl->set("date",date("d/m/y h:ia",$review['posted']));
         $reviews .= $retpl->output();
     }
 }
@@ -138,7 +138,7 @@ if($ExchangesQuery->num_rows>0) {
         
         $extpl->set("amount_receive_currency",gatewayinfo($ex['gateway_receive'],"currency"));
         
-        $extpl->set("date",date("d/m/Y h:ma",$ex['created']));
+        $extpl->set("date",date("d/m/y h:ia",$ex['created']));
         $latest_exchanges .= $extpl->output();
     }
 }
@@ -193,7 +193,7 @@ if($b == "view") {
     $tpl = new Template("app/templates/".$settings['default_template']."/news_view.html",$lang);
     $tpl->set("title",$row['title']);
     $tpl->set("content",$row['content']);
-    $tpl->set("date",date("d/m/Y H:ma",$row['created']));
+    $tpl->set("date",date("d/m/y h:ia",$row['created']));
     $tpl->set("id",$row['id']);
     $tpl->set("url",$settings['url']);
     $recent_popular = '';
@@ -202,7 +202,7 @@ if($b == "view") {
         while($p = $PopularQuery->fetch_assoc()) {
             $rtpl = new Template("app/templates/".$settings['default_template']."/rows/recent_popular_row.html",$lang);
             $rtpl->set("title",$p['title']);
-            $rtpl->set("date",date("d/m/Y H:ma",$p['created']));
+            $rtpl->set("date",date("d/m/y h:ia",$p['created']));
             $rtpl->set("id",$p['id']);
             $rtpl->set("url",$settings['url']);
             $recent_popular .= $rtpl->output();
@@ -227,7 +227,7 @@ if($b == "view") {
         while($e_row = $E_Query->fetch_assoc()) {
             $ntpl = new Template("app/templates/".$settings['default_template']."/rows/news_row.html",$lang);
             $ntpl->set("title",$e_row['title']);
-            $ntpl->set("date",date("d/m/Y H:ma",$e_row['created']));
+            $ntpl->set("date",date("d/m/y h:ia",$e_row['created']));
             $ntpl->set("id",$e_row['id']);
             $ntpl->set("url",$settings['url']);
             $ntpl->set("content",croptext($e_row['content'],200));
@@ -248,7 +248,7 @@ if($b == "view") {
         while($p = $PopularQuery->fetch_assoc()) {
             $rtpl = new Template("app/templates/".$settings['default_template']."/rows/recent_popular_row.html",$lang);
             $rtpl->set("title",$p['title']);
-            $rtpl->set("date",date("d/m/Y H:ma",$p['created']));
+            $rtpl->set("date",date("d/m/y h:ia",$p['created']));
             $rtpl->set("id",$p['id']);
             $rtpl->set("url",$settings['url']);
             $recent_popular .= $rtpl->output();
