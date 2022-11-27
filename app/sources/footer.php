@@ -8,4 +8,4 @@ $tpl = new Template("app/templates/".$settings['default_template']."/footer.html
 $tpl->set("url",$settings['url']);
 $tpl->set("name",$settings['name']);
 echo $tpl->output();
-?>
+?> 
