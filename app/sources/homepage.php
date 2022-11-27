@@ -30,7 +30,7 @@ if($QueryGateways->num_rows>0) {
         $i++;
     }
 } 
-$QueryDirections = $db->query("SELECT * FROM ce_gateways_directions WHERE gateway_id='$fid'");
+$QueryDirections = $db->query("SELECT * FROM ce_gateways_directions WHERE gateway_id='$fid'"); 
 if($QueryDirections->num_rows>0) {
     $gd = $QueryDirections->fetch_assoc();
     $directions = explode(",",$gd['directions']);
