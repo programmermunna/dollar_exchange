@@ -30,7 +30,7 @@ if(checkSession()) {
     $umtpl->set("url",$settings['url']);
     $umtpl->set("name",$settings['name']);
     $unames = idinfo($_SESSION['ce_uid'],"first_name").' '.idinfo($_SESSION['ce_uid'],"last_name");
-    $umtpl->set("unames",$unames);
+    $umtpl->set("unames",$unames); 
     $UserMenu = $umtpl->output();
 } else {
     $umtpl = new Template("app/templates/".$settings['default_template']."/rows/user_notlogged.html",$lang);
